@@ -22,3 +22,7 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+struct workoutStrain {
+    var strain: Float
+}
