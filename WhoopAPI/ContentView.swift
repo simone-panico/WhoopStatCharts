@@ -25,6 +25,11 @@ struct workoutStrain: Identifiable {
     }
 }
 
+enum Picks: String, CaseIterable, Identifiable {
+    case chocolate, vanilla, strawberry
+    var id: Self { self }
+}
+
 
 
 var data: [workoutStrain] = [
@@ -37,14 +42,26 @@ var data: [workoutStrain] = [
 ]
 
 struct ContentView: View {
+    @State private var selectedPicks: [Picks] = Array(repeating: .chocolate, count: 5)
     var body: some View {
         NavigationStack {
             List(0 ..< 5) { item in
-                Chart(data) {
-                    LineMark(x: .value("Date", $0.created_at), y: .value("Strain", $0.strain))
+                VStack {
+                    Text("Title for ")
+                        .font(.headline)
+                        .padding(.bottom, 5)
+                    Picker("Flavor", selection: $selectedPicks[item]) {
+                        Text("Chocolate").tag(Picks.chocolate)
+                        Text("Vanilla").tag(Picks.vanilla)
+                        Text("Strawberry").tag(Picks.strawberry)
+                    }
+                    Chart(data) {
+                        LineMark(x: .value("Date", $0.created_at), y: .value("Strain", $0.strain))
+                    }
+                    .frame(height: 200)
+                    .padding()
+                    Divider()
                 }
-                .frame(height: 200)
-                .padding()
             }
             .navigationTitle("Whoop Analysis")
         }
