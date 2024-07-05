@@ -38,9 +38,18 @@ var data: [workoutStrain] = [
 
 struct ContentView: View {
     var body: some View {
-        Chart(data) {
-            LineMark(x: .value("Date", $0.created_at), y: .value("Strain", $0.strain))
+        NavigationStack {
+            List(0 ..< 5) { item in
+                Chart(data) {
+                    LineMark(x: .value("Date", $0.created_at), y: .value("Strain", $0.strain))
+                }
+                .frame(height: 200)
+                .padding()
+            }
+            .navigationTitle("Whoop Analysis")
         }
+        
+        
     }
 }
 
