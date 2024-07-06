@@ -11,6 +11,8 @@
 		260721AA2C15F7EB008F8A80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260721A92C15F7EB008F8A80 /* ContentView.swift */; };
 		260721AC2C15F7EE008F8A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 260721AB2C15F7EE008F8A80 /* Assets.xcassets */; };
 		260721AF2C15F7EE008F8A80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 260721AE2C15F7EE008F8A80 /* Preview Assets.xcassets */; };
+		26AD21532C394D0100A937CB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AD21522C394D0100A937CB /* MainView.swift */; };
+		26AD21552C394D7C00A937CB /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AD21542C394D7C00A937CB /* AccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,8 @@
 		260721AE2C15F7EE008F8A80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		260721BB2C15FADA008F8A80 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		260721BD2C15FADB008F8A80 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		26AD21522C394D0100A937CB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		26AD21542C394D7C00A937CB /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				260721A72C15F7EB008F8A80 /* WhoopAPIApp.swift */,
+				26AD21522C394D0100A937CB /* MainView.swift */,
 				260721A92C15F7EB008F8A80 /* ContentView.swift */,
+				26AD21542C394D7C00A937CB /* AccountView.swift */,
 				260721AB2C15F7EE008F8A80 /* Assets.xcassets */,
 				260721AD2C15F7EE008F8A80 /* Preview Content */,
 			);
@@ -163,7 +169,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26AD21552C394D7C00A937CB /* AccountView.swift in Sources */,
 				260721AA2C15F7EB008F8A80 /* ContentView.swift in Sources */,
+				26AD21532C394D0100A937CB /* MainView.swift in Sources */,
 				260721A82C15F7EB008F8A80 /* WhoopAPIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
